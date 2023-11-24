@@ -9,7 +9,7 @@
     
 }
 
-body {
+.mi-body {
     font-family: 'Cabin', sans-serif;
     overflow-x: auto;
     max-width: 100vw;
@@ -19,22 +19,61 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center top;
-    padding-top: 70px;
+    background-position-x: 0;
+    background-position-y:0;
+    
 }
 
 header {
-    position: fixed;
-    top: 0px;
-    padding: 0;
+    border: 1px solid black;
+    width: 100vw;
     margin: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 5;
+    padding: 0;
+    position: fixed;
+    top: 0;
 }
-.nav-bar {
+
+.mi-nav-bar{
+    box-sizing: content-box;
+    width: calc(100vw - 3rem);
+    height: 15vh;
+    max-height: 90px;
+    background-color: white;
+    z-index: 100;
+    display:flex;
+    margin: 0.5rem 1.5rem;
+    border: 1px solid #585858;
+    border-radius: 1rem;
+}
+
+.grilla {
+    background-color: blue;
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: 6fr 6fr;
+    grid-template-rows: 1fr;
+}
+
+.nav-bar-icon-search-container {
     display: flex;
-    margin: 10px;
+    border: 1px solid;
+    align-items: center;
+}
+
+.nav-bar-icon-search-container .grilla {
+    background-color: yellow;
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: 1fr 4fr 1fr;
+    a {
+        margin: 10px;
+    }
+}
+
+
+
+.nav-var-botones {
+    border: 1px solid;
 }
 
 .nav-bar-logo-icon {
@@ -46,11 +85,11 @@ header {
     height: 50px;
 
 }
-.search {
+#search {
     margin-left: 10px;
     border-radius: 30px;
     border: 1px solid #585858;
-    width: 300px;
+    width: auto;
     height: 50px;
     border-color: #585858;
     font-size: 24px;
@@ -87,39 +126,63 @@ header {
     background-color: inherit;
 }
 
+
+
 .nav-bar-li-a:hover{
     background-color: #fe5858;
-    border: 1px solid #353535;
+    border: 1px solid #585858;
     border-radius: 5px;
     line-height: 50px;
     color: white;
 }
 
 .mi-main {
-    padding-top: 70px;
-    padding-bottom: 50px;
-    height: 100vh;
-    
+
+    padding: calc(15vh + 1rem) 1.5rem 1.5rem 1.5rem;
+    height: auto;
 }
 
 .mi-footer {
-    bottom: 0px;
+    width: calc(100vw - 3rem);
+    height: 5vh;
+    max-height: 45px;
+    border: 1px solid #585858;
     background-color: white;
-    text-align: center;
-    padding: 0 5px 0 5px;
-    border: 1px solid black;
-    font-size: 14px;
-    position: fixed;
-    
+    z-index: 100;
+    margin: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    bottom: 0px;
+
     p {
-        margin: 2px 0 2px 0;
+        font-size: 1rem;
+        text-align: center;
+        color: black;
+        margin-bottom: 0rem;
+    }
+    
+}
+
+
+
+.container-fluid, .col, .row {
+    border: 1px solid black;
+}
+
+
+
+
+/*MEDIA QUERYS*/
+
+@media (max-width:575px) {
+    .nav-bar-ul {
+        display:none;
     }
 }
 
-.mi-h1 {
-    margin: 0px;
-    padding: 0px;
+@media (min-width:576px){
+    .menu-bx {
+        display: none;
+    }
 }
-
-
 
