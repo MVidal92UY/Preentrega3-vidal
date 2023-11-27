@@ -152,9 +152,11 @@ header {
     background-color: white;
     z-index: 100;
     margin: 0.5rem 1.5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     display: flex;
     bottom: 0px;
+    align-items: center;
+
 
     p {
         font-size: 1rem;
@@ -164,7 +166,6 @@ header {
     }
     
 }
-
 
 
 /*MEDIA QUERYS*/
@@ -177,6 +178,12 @@ header {
     
     .nav-bar-icon-search-container{
         width: 100%;
+    }
+}
+
+@media (min-width:576px){
+    .menu-bx {
+        display: none;
     }
 }
 
@@ -199,9 +206,5 @@ header {
     }
 }
 
-@media (min-width:576px){
-    .menu-bx {
-        display: none;
-    }
-}
+
 
